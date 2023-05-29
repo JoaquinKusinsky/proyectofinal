@@ -1,0 +1,19 @@
+.header {
+background-color: blue;
+padding: 10px;
+}
+
+.logo {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+width: 170px;
+padding: 5px;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
