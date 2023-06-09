@@ -6,16 +6,16 @@ fetch (url)
 })
 .then (function (data){
     console.log(data)
-    let generos = document.querySelector (".generos")
+    let listadogen = document.querySelector (".listadogen")
     let listageneros = []
     for (let i=0; i < data.data.length; i++){
         listageneros +=
         `<article>
-        <img src= "${data.data[i].picture}" alt="" />
-        <p>Name:  ${data.data[i].name}  </p>
+        <img class= "imgenero" src= "${data.data[i].picture_medium}" alt="" />
+        <p class= "namegen">  ${data.data[i].name}  </p>
         </article>`
     }
-    generos.innerHTML= listageneros
+    listadogen.innerHTML= listageneros
     console.log(listageneros);
 })
 .catch (function (error){

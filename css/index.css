@@ -32,20 +32,43 @@ header {
     justify-content: center;
     margin-top: 10px;
 }
-
-.listado {
-    margin-bottom: 100px;
-}
-
-.listado ul{
+.listadoart {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.listado li {
-    margin-bottom: 5px;
+.listadoalb {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.listadocan {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.listadogen {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.imgenero {
+    display: flex;
+    margin: 0px 40px 0px 40px;
+}
+
+.namegen{
+    
 }
