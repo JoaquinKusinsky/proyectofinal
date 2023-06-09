@@ -1,6 +1,9 @@
 * {
     background-color: rgba(17, 17, 17, 255);
     color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 header {
@@ -8,67 +11,94 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: lightslategray;
+    background-color: #2F2F2F;
 }
 
 .logo {
     width: 220px;
     border-radius: 35%;
-    background-color: lightslategray;
+    background-color: #2F2F2F;
 }
+
+
 
 .menudenav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    background-color: #2F2F2F;
 }
 
 .menudenav li {
     margin-right: 40px;
+    font-size: 20px;
+    background-color: #2F2F2F;
 }
+
+.menudenav li :hover {
+    text-decoration: underline;
+}
+
 
 .barradebusq {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    border-radius: 20%;
 }
-.listadoart {
+.listadoart, .listadogen, .listadocan, .listadoalb  {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 
-.listadoalb {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+.imgcan, .imgalb, .imgart, .imgenero {
+display: flex;
+margin: 0px 40px 0px 40px;
+width: 100%;
+max-width: 200px;
+height: auto;
+object-fit: cover;
+border-radius: 10px;
 }
 
-.listadocan {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+.pcan, .palb, .part, .pgen {
+display: flex;
+margin: 15px 40px 15px 40px;
+text-decoration: overline;
+margin-top: 10px;
+font-size: 14px;
+font-weight: bold;
+max-width: 40%;
+
 }
 
-.listadogen {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+footer {
+text-align: center;
+padding: 20px;
+background-color: #424242;
+color: #ffffff;
+  }
+
+.pfooter {
+    background-color: #424242;
 }
 
-.imgenero {
-    display: flex;
-    margin: 0px 40px 0px 40px;
+.listadoart a,
+.listadoalb a,
+.listadocan a,
+.listadogen a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.namegen{
-    
+.hcan, .hart, .halb, .hgen {
+    margin-left: 30px;
+    font-weight: bold;
 }

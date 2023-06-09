@@ -12,8 +12,8 @@ fetch (url)
         listaartistas +=
         `<article class= "listadoart">
         <a href="./detalle.html">
-        <img src= "${data.data[i].picture_medium}" alt="" />
-        <p>  ${data.data[i].name}  </p>
+        <img class="imgart" src= "${data.data[i].picture_medium}" alt="" />
+        <p class="part" >  ${data.data[i].name}  </p>
         </a>
         </article>`
         
@@ -40,8 +40,8 @@ fetch (url2)
         listaartistas +=
         `<article class= "listadoalb">
         <a href="./detalle.html">
-        <img src= "${data.data[i].cover_medium}" alt="" />
-        <p>  ${data.data[i].title}  </p>
+        <img class="imgalb" src= "${data.data[i].cover_medium}" alt="" />
+        <p class="palb">  ${data.data[i].title}  </p>
         </a>
         </article>`
     }
@@ -66,8 +66,8 @@ fetch (url3)
         listaartistas +=
         `<article class= "listadocan">
         <a href="./detalle.html">
-        <img src= "${data.data[i].album.cover_medium}" alt="" />
-        <p>  ${data.data[i].title}  </p>
+        <img class="imgcan" src= "${data.data[i].album.cover_medium}" alt="" />
+        <p class="pcan">  ${data.data[i].title}  </p>
         </a>
         </article>`
     }

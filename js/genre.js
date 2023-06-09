@@ -12,7 +12,7 @@ fetch (url)
         listageneros +=
         `<article>
         <img class= "imgenero" src= "${data.data[i].picture_medium}" alt="" />
-        <p class= "namegen">  ${data.data[i].name}  </p>
+        <p class= "pgen">  ${data.data[i].name}  </p>
         </article>`
     }
     listadogen.innerHTML= listageneros
