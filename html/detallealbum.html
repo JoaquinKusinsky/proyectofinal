@@ -8,37 +8,35 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Detalle del album</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<header>
-    <img src="../img/Logo_proyectofinalprogra-PhotoRoom.png-PhotoRoom.png" class="logo" alt="" class="logo">
-    <ul class="menudenav">
-        <li> <a href="./home.html">Inicio</a></li>
-        <li><a href="./generos.html">Géneros</a></li>
-        <li><a href="./playlist-fav.html">Playlists</a></li>
-    </ul>
-    <button class="lightmode" onclick="myFunction()">
-        Light Mode
-    </button>  
-    <!-- //formulario -->
-    <form class="barradebusq" action="resultdebusqueda.html" method="get">
-        <input name="buscador" id="" cols="" rows="" placeholder="¿Que quieres escuchar?"></input>
-        <button>
-            <label for="search">BUSCAR</label>
-        </button>
-    </form>
-</header>
 
+    <header>
+        <img src="../img/Logo_proyectofinalprogra-PhotoRoom.png-PhotoRoom.png" class="logo" alt="" class="logo">
+        <ul class="menudenav">
+            <li><a href="./home.html">Inicio</a></li>
+            <li><a href="./generos.html">Géneros</a></li>
+            <li><a href="./playlist-fav.html">Playlists</a></li>
+        </ul>
+        <button class="lightmode" onclick="myFunction()">Light Mode</button>
+        <!-- //formulario -->
+        <form class="barradebusq" action="resultdebusqueda.html" method="get">
+            <input name="buscador" id="" cols="" rows="" placeholder="¿Que quieres escuchar?"></input>
+            <button>
+                <label for="search">BUSCAR</label>
+            </button>
+        </form>
+    </header>
+    <body>
+    <div class="album-details"></div>
 
-
-    <script src=""></script>
-
-<footer>
-    <p class="pfooter">Joaquin Kusinsky & Santiago Santagada</p>
-</footer>
+    <script src="../js/detallealbum.js"></script>
 </body>
+    <footer>
+        <p class="pfooter">Joaquin Kusinsky & Santiago Santagada</p>
+    </footer>
+
 
 </html>
