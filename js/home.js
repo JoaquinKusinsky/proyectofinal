@@ -11,7 +11,7 @@ fetch (url)
     for (let i = 1; i < data.data.length; i++){
         listaartistas +=
         `<article class= "listadoart">
-        <a href="./detalle.html">
+        <a href="./detalleartista.html">
         <img class="imgart" src= "${data.data[i].picture_medium}" alt="" />
         <p class="part" >  ${data.data[i].name}  </p>
         </a>
@@ -39,7 +39,7 @@ fetch (url2)
     for (let i = 1; i < data.data.length; i++){
         listaartistas +=
         `<article class= "listadoalb">
-        <a href="./detalle.html">
+        <a href="./detallealbum.html">
         <img class="imgalb" src= "${data.data[i].cover_medium}" alt="" />
         <p class="palb">  ${data.data[i].title}  </p>
         </a>
@@ -65,7 +65,7 @@ fetch (url3)
     for (let i = 1; i < data.data.length; i++){
         listaartistas +=
         `<article class= "listadocan">
-        <a href="./detalle.html">
+        <a href="./detallecancion.html">
         <img class="imgcan" src= "${data.data[i].album.cover_medium}" alt="" />
         <p class="pcan">  ${data.data[i].title}  </p>
         </a>

@@ -6,7 +6,7 @@ let endpointbusqueda = `https://api.allorigins.win/raw?url=https://api.deezer.co
 if (busqueda === "") {
     alert("Parece que no escribiste nada, inténtalo nuevamente escribiendo algo.");
 } else if (busqueda.length < 3) {
-    alert("Tu búsqueda debe contener a`l menos 3 caracteres.");
+    alert("Tu búsqueda debe contener al menos 3 caracteres.");
 } else {
     fetch(endpointbusqueda)
         .then(function(response) {
@@ -23,9 +23,9 @@ if (busqueda === "") {
                 let busqul = [];
                 for (let i = 0; i < datos.data.length; i++) {
                     busqul += `
-                        <li>
+                        <li class="resultadosdebusqueda">
                             <p>${datos.data[i].title}</p>
-                            <img src="${datos.data[i].album.cover_medium}" alt=''/>
+                            <img class="imgbusqueda" src="${datos.data[i].album.cover_medium}" alt=''/>
                             <p>Artist: ${datos.data[i].artist.name}</p>
                             <p>Album: ${datos.data[i].album.title}</p>
                         </li>`;

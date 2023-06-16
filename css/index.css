@@ -8,6 +8,7 @@
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -46,17 +47,17 @@ header {
     justify-content: center;
     border-radius: 20%;
 }
-.listadoart, .listadogen, .listadocan, .listadoalb  {
+.listadoart, .listadogen, .listadocan, .listadoalb, .resultadosdebusqueda {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
 
-.imgcan, .imgalb, .imgart, .imgenero {
+
+.imgcan, .imgalb, .imgart, .imgenero, .imgbusqueda {
 display: flex;
 margin: 0px 40px 0px 40px;
 width: 100%;
@@ -73,7 +74,6 @@ margin-top: 10px;
 font-size: 14px;
 font-weight: bold;
 max-width: 40%;
-
 }
 
 footer {
@@ -101,3 +101,4 @@ color: #ffffff;
     margin-left: 30px;
     font-weight: bold;
 }
+

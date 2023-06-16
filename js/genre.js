@@ -11,6 +11,7 @@ fetch (url)
     for (let i=0; i < data.data.length; i++){
         listageneros +=
         `<article>
+        <a href="./detallegenero.html?id=${data.data[i].id}">
         <img class= "imgenero" src= "${data.data[i].picture_medium}" alt="" />
         <p class= "pgen">  ${data.data[i].name}  </p>
         </article>`
@@ -21,3 +22,5 @@ fetch (url)
 .catch (function (error){
     alert (error)
 })
+
+
