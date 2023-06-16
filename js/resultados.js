@@ -25,7 +25,7 @@ if (busqueda === "") {
                     busqul += `
                         <li class="resultadosdebusqueda">
                         
-                            <p>${datos.data[i].title}</p>
+                            <p class="pbusqueda">${datos.data[i].title}</p>
                             <img class="imgbusqueda" src="${datos.data[i].album.cover_medium}" alt=''/>
                             <p class="pbusqueda">Artist: ${datos.data[i].artist.name}</p>
                             <p class="pbusqueda">Album: ${datos.data[i].album.title}</p>
@@ -41,3 +41,10 @@ if (busqueda === "") {
             console.log(error);
         });
 }
+
+
+function myFunction(){
+    let element = document.body; //estoy guardando el nodo(body) en la variable element
+    element.classList.toggle("light-mode") // lo que hace toggle es que busca en el css un clase que se relacione con el body y lo yo modifiqué en el css (light-mode)
+}
+

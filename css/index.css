@@ -22,15 +22,13 @@ header {
     align-items: center;
     padding: 10px;
     background-color: #2F2F2F;
+    box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
 }
 
 .logo {
     width: 220px;
     border-radius: 35%;
-
 }
-
-
 
 .menudenav {
     list-style: none;
@@ -58,7 +56,7 @@ header {
     justify-content: center;
     border-radius: 20%;
 }
-.listadoart, .listadogen, .listadocan, .listadoalb, .resultadosdebusqueda {
+.listadoart, .listadogen, .listadocan, .listadoalb {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -66,6 +64,17 @@ header {
     flex-wrap: wrap;
 }
 
+.resultadosdebusqueda {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .resultsbusqueda{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
 
 
@@ -125,6 +134,9 @@ color: #ffffff;
 color: black;
 }
 
+.light-mode header {
+    background-color: #D0D0D0;
+}
 
 .lightmode { 
     color: black;
