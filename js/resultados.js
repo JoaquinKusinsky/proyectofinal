@@ -24,10 +24,11 @@ if (busqueda === "") {
                 for (let i = 0; i < datos.data.length; i++) {
                     busqul += `
                         <li class="resultadosdebusqueda">
+                        
                             <p>${datos.data[i].title}</p>
                             <img class="imgbusqueda" src="${datos.data[i].album.cover_medium}" alt=''/>
-                            <p>Artist: ${datos.data[i].artist.name}</p>
-                            <p>Album: ${datos.data[i].album.title}</p>
+                            <p class="pbusqueda">Artist: ${datos.data[i].artist.name}</p>
+                            <p class="pbusqueda">Album: ${datos.data[i].album.title}</p>
                         </li>`;
                 }
                 resultados.innerHTML = busqul;

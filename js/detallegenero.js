@@ -11,7 +11,7 @@ fetch(genreUrl)
     .then(function(data) {
         console.log(data);
 
-        let genreName = document.querySelector('#genre-name');
+        let genreName = document.querySelector('#nombregen');
         genreName.innerText = data.name;
     })
     .catch(function(error) {
@@ -25,7 +25,7 @@ fetch(artistsUrl)
     .then(function(data) {
         console.log(data);
 
-        let genreArtists = document.querySelector('.genre-artists');
+        let genreArtists = document.querySelector('.artistasgen');
         let artistsHTML = '';
 
         for (let i = 0; i < data.data.length; i++) {
