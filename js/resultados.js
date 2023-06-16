@@ -25,10 +25,13 @@ if (busqueda === "") {
                     busqul += `
                         <li class="resultadosdebusqueda">
                         
-                            <p class="pbusqueda">${datos.data[i].title}</p>
+                        <a href="./detallecancion.html">
+                        <p class="pbusqueda">${datos.data[i].title}</p>
                             <img class="imgbusqueda" src="${datos.data[i].album.cover_medium}" alt=''/>
                             <p class="pbusqueda">Artist: ${datos.data[i].artist.name}</p>
                             <p class="pbusqueda">Album: ${datos.data[i].album.title}</p>
+                            </a> 
+
                         </li>`;
                 }
                 resultados.innerHTML = busqul;

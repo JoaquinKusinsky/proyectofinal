@@ -64,13 +64,13 @@ header {
     flex-wrap: wrap;
 }
 
-.resultadosdebusqueda {
+.resultadosdebusqueda, .artistasgenero {
     width: 25%;
     padding: 10px;
     box-sizing: border-box;
   }
 
-  .resultsbusqueda{
+  .resultsbusqueda, .artistasgen{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -105,9 +105,6 @@ background-color: #424242;
 color: #ffffff;
   }
 
-.pfooter, .foot2 {
-    background-color: #424242;
-}
 
 .listadoart a,
 .listadoalb a,
@@ -135,6 +132,10 @@ color: black;
 }
 
 .light-mode header {
+    background-color: #D0D0D0;
+}
+
+.light-mode footer {
     background-color: #D0D0D0;
 }
 

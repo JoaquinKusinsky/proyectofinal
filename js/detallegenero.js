@@ -31,10 +31,10 @@ fetch(artistsUrl)
         for (let i = 0; i < data.data.length; i++) {
             let artist = data.data[i];
             artistsHTML += `
-                <li>
+                <li class="artistasgenero">
                     <a href="detalleartista.html?id=${artist.id}">
-                    <img src="${artist.picture_medium}" alt="${artist.name}">
-                    <h2 class='h2-artist'>${artist.name}</h2>
+                    <img class="imgenero" src="${artist.picture_medium}" alt="${artist.name}">
+                    <h2 class="pgen">${artist.name}</h2>
                     </a>
                 </li>
             `;
@@ -45,3 +45,9 @@ fetch(artistsUrl)
     .catch(function(error) {
         console.log(error);
     });
+
+
+    function myFunction(){
+        let element = document.body; //estoy guardando el nodo(body) en la variable element
+        element.classList.toggle("light-mode") // lo que hace toggle es que busca en el css un clase que se relacione con el body y lo yo modifiqué en el css (light-mode)
+    }
