@@ -129,3 +129,11 @@ color: black;
 .lightmode { 
     color: black;
 }
+
+@media (max-width: 400px) {
+    .menudenav {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
