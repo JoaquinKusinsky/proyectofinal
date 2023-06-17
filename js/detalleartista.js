@@ -3,48 +3,59 @@ function myFunction(){
     element.classList.toggle("light-mode") // lo que hace toggle es que busca en el css un clase que se relacione con el body y lo yo modifiqué en el css (light-mode)
 }
 
+let string = location.search
+let data = new URLSearchParams(string);
+let id = data.get("id")
 
-// Obtener el ID del artista de la URL
-let urlParams = new URLSearchParams(window.location.search);
-let id = urlParams.get('id');
 
-if (id) {
-  let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`;
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
 
-  fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data);
-      let arts = document.querySelector(".arts");
-      let detalleArtista = `
-        <article class="listadoart">
-          <img class="imgart" src="${data.picture_medium}" alt="" />
-          <p class="part">${data.name}</p>
-        </article>
-      `;
-      arts.innerHTML = detalleArtista;
 
-      let albums = "<ul class='album-list'>";
-      if (data.albums && data.albums.data) {
-        let albumsData = data.albums.data;
-        for (let i = 0; i < albumsData.length && i < 5; i++) {
-          albums += `<li>${albumsData[i].title}</li>`;
-        }
-      }
-      albums += "</ul>";
-      arts.innerHTML += albums;
+fetch(url)
+   .then(function (response) {
+       return response.json()
 
-      console.log(detalleArtista);
-    })
-    .catch(function(error) {
-      console.log('Error:', error);
-    });
-} else {
-  console.log('No se proporcionó un ID de artista en la URL.');
-}
 
+   })
+   .then(function (data) {
+       console.log(data);
+       let detartistas = document.querySelector(".detalle_artista")
+       let detalleart =
+           ` <li> 
+               <p>${data.name}  </p>
+               <img src= "${data.picture_medium}" alt='' />
+               </li>`;
+               fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`)
+               .then(function (response) {
+                   return response.json()
+
+
+               })
+               .then(function (data) {
+                   console.log(data);
+                   let topalbum = document.querySelector(".albumes")
+                   let albums = [];
+                   for (let i = 0; i < 5; i++) {
+                       albums += `<li>
+                       <a href="../detallealbum.html?id=${data.data[i].id}"> <p> ${i+1}: ${data.data[i].title}</p> </a>
+                              
+                               </li>`;
+                   }
+
+
+                   topalbum.innerHTML = albums
+
+
+               })
+          
+           
+
+
+       detartistas.innerHTML = detalleart
+   })
+   .catch(function (error) {
+       console.log(error);
+   })
 
 
 

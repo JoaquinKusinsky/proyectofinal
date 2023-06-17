@@ -11,7 +11,7 @@ fetch (url)
     for (let i = 1; i < data.data.length; i++){
         listaartistas +=
         `<article class= "listadoart">
-        <a href="./detalleartista.html">
+        <a href="./detalleartista.html?">
         <img class="imgart" src= "${data.data[i].picture_medium}" alt="" />
         <p class="part" >  ${data.data[i].name}  </p>
         </a>
